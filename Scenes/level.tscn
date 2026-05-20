@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bampfv7qw5be7"]
+
+[ext_resource type="Texture2D" uid="uid://dryx5ao5x1ov" path="res://Sprites/fon.jpg" id="1_tumq0"]
+[ext_resource type="Script" uid="uid://do707412eega5" path="res://Scripts/storelink.gd" id="2_81xng"]
+[ext_resource type="Texture2D" uid="uid://cqqq643iw1k8b" path="res://Sprites/Без названия (8).jpg" id="2_k5f4k"]
+[ext_resource type="Script" uid="uid://5dkwiwqfwa02" path="res://Scenes/background_sprite.gd" id="2_wqkje"]
+[ext_resource type="Script" uid="uid://bsg2hhp106wbh" path="res://Scripts/bottle.gd" id="3_6phgx"]
+
+[node name="Level" type="Node2D"]
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+position = Vector2(605, 345)
+scale = Vector2(1.1170673, 0.3817601)
+texture = ExtResource("1_tumq0")
+script = ExtResource("2_wqkje")
+
+[node name="bottle" type="TextureButton" parent="."]
+offset_left = 668.0
+offset_top = 261.0
+offset_right = 966.0
+offset_bottom = 531.0
+texture_normal = ExtResource("2_k5f4k")
+script = ExtResource("3_6phgx")
+
+[node name="TutorialText" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 15.0
+offset_right = 895.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 30
+text = "Жми на бутылку чтобы ее улудшить!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" type="Label" parent="."]
+offset_left = 797.0
+offset_top = 87.00001
+offset_right = 837.0
+offset_bottom = 110.00001
+scale = Vector2(4.054623, 3.8762457)
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 322)
+
+[node name="storelink" type="Button" parent="."]
+offset_left = 182.0
+offset_top = 285.0
+offset_right = 190.0
+offset_bottom = 293.0
+scale = Vector2(1.8988879, 2.0363538)
+text = "Магазин"
+script = ExtResource("2_81xng")
+
+[connection signal="pressed" from="bottle" to="bottle" method="_on_pressed"]
+[connection signal="pressed" from="storelink" to="bottle" method="_on_storelink_pressed"]

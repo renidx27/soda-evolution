@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cjv2tg0sngb3e"]
+
+[ext_resource type="Texture2D" uid="uid://b47ptfi31cou4" path="res://Sprites/fog.jpg" id="1_b7cco"]
+
+[node name="_" type="Node2D" unique_id=1314295202]
+
+[node name="_" type="Sprite2D" parent="." unique_id=1009351714]
+position = Vector2(579, 325.5)
+scale = Vector2(5.6748767, 2.6088707)
+texture = ExtResource("1_b7cco")
+
+[node name="__" type="Label" parent="." unique_id=1202224815]
+offset_left = 185.0
+offset_top = 229.0
+offset_right = 961.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0.36367702, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "THE FOG IS COMING"

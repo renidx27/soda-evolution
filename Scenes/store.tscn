@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://8vx87aik0fbk"]
+
+[ext_resource type="Texture2D" uid="uid://gumd20smjcjv" path="res://Sprites/store.jpg" id="1_h38w0"]
+[ext_resource type="Texture2D" uid="uid://cvuf4erejh1nx" path="res://Sprites/click.png" id="2_j65sj"]
+[ext_resource type="Script" uid="uid://y3xehnko25h7" path="res://Scripts/clickstore.gd" id="3_w6sp3"]
+[ext_resource type="Script" uid="uid://6ixbugc1x1dh" path="res://Scripts/back.gd" id="4_j65sj"]
+[ext_resource type="Texture2D" uid="uid://ddvkm24nd8ggt" path="res://Sprites/space.jpg" id="5_m7h4d"]
+[ext_resource type="Script" uid="uid://c6xhncg42s8py" path="res://Scripts/boost_button.gd" id="6_a54sg"]
+[ext_resource type="Script" uid="uid://ch6cnne8iew5q" path="res://Scenes/_.gd" id="7_a54sg"]
+
+[node name="Store" type="Node2D" unique_id=624068932]
+
+[node name="storebackground" type="Sprite2D" parent="." unique_id=1823873963]
+position = Vector2(575.5, 325)
+scale = Vector2(3.8366666, 3.8452382)
+texture = ExtResource("1_h38w0")
+
+[node name="Label" type="Label" parent="." unique_id=1416042120]
+offset_left = 345.0
+offset_top = 20.0
+offset_right = 678.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 70
+text = "МАГАЗИН"
+
+[node name="clickstore" type="Button" parent="." unique_id=1715276431]
+offset_left = 85.0
+offset_top = 143.0
+offset_right = 318.0
+offset_bottom = 376.0
+icon = ExtResource("2_j65sj")
+script = ExtResource("3_w6sp3")
+
+[node name="Label2" type="Label" parent="." unique_id=1271281662]
+offset_left = 147.0
+offset_top = 390.0
+offset_right = 261.0
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "+1 клик"
+
+[node name="back" type="Button" parent="." unique_id=252289578]
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 102.0
+offset_bottom = 64.0
+text = "Назад"
+script = ExtResource("4_j65sj")
+
+[node name="BoostButton" type="Button" parent="." unique_id=1442226374]
+offset_left = 469.0
+offset_top = 177.0
+offset_right = 729.0
+offset_bottom = 333.0
+text = "
+"
+icon = ExtResource("5_m7h4d")
+script = ExtResource("6_a54sg")
+
+[node name="_" type="Button" parent="." unique_id=990332314]
+offset_left = 1117.0001
+offset_top = 11.0
+offset_right = 1133.0001
+offset_bottom = 42.0
+scale = Vector2(0.49535426, 0.3246692)
+text = "?"
+script = ExtResource("7_a54sg")
+
+[connection signal="pressed" from="clickstore" to="clickstore" method="_on_pressed"]
+[connection signal="pressed" from="back" to="back" method="_on_pressed"]
+[connection signal="pressed" from="_" to="_" method="_on_pressed"]
